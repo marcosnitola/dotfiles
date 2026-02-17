@@ -1,0 +1,36 @@
+font=JetBrainsMono Nerd Font Mono
+color=282828
+image=$(cat $XDG_CONFIG_HOME/sway/wallpaper-path)
+
+indicator-idle-visible
+indicator-radius=100
+
+show-failed-attempts
+
+separator-color=282828
+line-color=282828
+text-color=ebdbb2
+
+inside-color=1d202180
+key-hl-color=fabd2f
+ring-color=d79921
+
+inside-clear-color=92837480
+line-clear-color=282828
+ring-clear-color=a89984
+text-clear-color=ebdbb2
+
+inside-ver-color=07667880
+line-ver-color=282828
+ring-ver-color=458588
+text-ver-color=ebdbb2
+
+inside-wrong-color=9d000680
+line-wrong-color=282828
+ring-wrong-color=cc241d
+text-wrong-color=ebdbb2
+
+
+layout-bg-color=ff00ff
+layout-border-color=ff00ff
+layout-text-color=ff00ff
