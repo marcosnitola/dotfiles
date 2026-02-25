@@ -97,6 +97,20 @@ button {
 	background-color: transparent;
 }
 
+#mpd {
+	padding: 0px 0.7em;
+	border-radius: 4px;
+	margin-left: 4px;
+}
+
+#mpd.playing {
+    background-color: #b12286;
+}
+
+#mpd.paused {
+    background-color: #8f3f71;
+}
+
 #idle_inhibitor.activated {
 	color: #282828;
 	background-color: #ebdbb2;
