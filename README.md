@@ -7,4 +7,6 @@ A Gruvbox-inspired dotfiles setup with a predominantly yellow color scheme.
 - **Application Launcher:** Wofi
 - **Bar:** Waybar
 - **Notification Daemon:** Mako
-- **Screen locker** Swaylock
+- **Screen locker** Swaylock / Swayidle
+- **Wallpaper** Swaybg
+- **Editor** Neovim
