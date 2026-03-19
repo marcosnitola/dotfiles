@@ -10,3 +10,4 @@ A Gruvbox-inspired dotfiles setup with a predominantly yellow color scheme.
 - **Screen locker** Swaylock / Swayidle
 - **Wallpaper** Swaybg
 - **Editor** Neovim (LazyVim)
+- **System information viewer** Fastfetch
