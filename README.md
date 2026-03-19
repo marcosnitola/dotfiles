@@ -9,4 +9,4 @@ A Gruvbox-inspired dotfiles setup with a predominantly yellow color scheme.
 - **Notification Daemon:** Mako
 - **Screen locker** Swaylock / Swayidle
 - **Wallpaper** Swaybg
-- **Editor** Neovim
+- **Editor** Neovim (LazyVim)
