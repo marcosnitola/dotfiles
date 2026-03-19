@@ -3,7 +3,7 @@
 A Gruvbox-inspired dotfiles setup with a predominantly yellow color scheme.
 
 ## Components
-- **Window Manager:** Sway
+- **Wayland Compositor:** Sway
 - **Application Launcher:** Wofi
 - **Bar:** Waybar
 - **Notification Daemon:** Mako
