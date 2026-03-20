@@ -25,8 +25,8 @@ window#waybar {
 	border: 2px solid #d79921;
 }
 
-window#waybar.empty #window{
-  border: 2px solid transparent;
+window#waybar.empty .modules-center {
+  opacity: 0;
 }
 
 .modules-left > * > label {
