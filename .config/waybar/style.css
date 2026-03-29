@@ -4,6 +4,7 @@
     font-size: 11px;
 	border-radius: 0px;
 	border: none;
+	background-clip: border-box;
 }
 
 window#waybar {
@@ -39,8 +40,7 @@ button {
 	min-width: 0;
 	border-radius: 0px;
 	outline: none;
-	background-clip: border-box;
-    transition: none;
+  transition: none;
 }
 
 #workspaces button {
@@ -144,6 +144,15 @@ button {
 #backlight {
 	background-color: #fabd2f;
 	color: #282828;
+}
+
+#network {
+  background-color: #689d6a;
+}
+
+#network.disconnected{
+  border-top: 2px solid #689d6a;
+  border-bottom: 2px solid #cc241d;
 }
 
 #clock {
