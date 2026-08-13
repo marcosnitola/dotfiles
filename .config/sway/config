@@ -150,7 +150,7 @@ for_window [class="Pinentry-gtk"] floating enable
 #
 
     # Switch the current container between different layout styles (tabbed, horizontal or vertical split)
-    bindsym $mod+w layout toggle tabbed split
+    bindsym $mod+w layout toggle tabbed splitv splith
     bindsym $mod+n splitt
 
     # Make the current focus fullscreen
@@ -164,6 +164,7 @@ for_window [class="Pinentry-gtk"] floating enable
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+    bindsym $mod+Shift+a focus child
 #
 # Scratchpad:
 #
