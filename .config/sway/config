@@ -20,6 +20,10 @@ set $menu wofi --show drun
 
 font pango:JetBrainsMono NFM 8
 
+### Load environment variables
+#exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY
+#exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY
+
 ### Output configuration
 #output * bg $XDG_WALLPAPER_PATH fill
 exec_always $XDG_CONFIG_HOME/sway/change-wallpaper.sh
