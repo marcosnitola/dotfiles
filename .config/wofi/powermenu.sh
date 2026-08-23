@@ -15,6 +15,11 @@ op=$(
     "$logout" \
   |
   wofi -i -j \
+    --height=212 \
+    --width=200 \
+    --location=top_right \
+    --xoffset=-36 \
+    --yoffset=20 \
     --style=$XDG_CONFIG_HOME/wofi/style-inputless.css \
     --cache-file=/dev/null \
     --dmenu
