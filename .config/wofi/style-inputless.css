@@ -1,0 +1,10 @@
+@import url(".config/wofi/style.css");
+
+#input{
+  all: unset;
+  min-height: 0px;
+  min-width: 0px;
+  margin: 0px;
+	padding: 0px;
+	border: none;
+}
