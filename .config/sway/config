@@ -26,7 +26,7 @@ font pango:JetBrainsMono NFM 8
 
 ### Output configuration
 #output * bg $XDG_WALLPAPER_PATH fill
-exec_always $XDG_CONFIG_HOME/sway/change-wallpaper.sh
+exec $XDG_CONFIG_HOME/sway/set-random-wallpaper.sh
 #output HDMI-A-1 {
 #	resolution 1680x1050
 #	scale 1.2 
