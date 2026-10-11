@@ -81,15 +81,16 @@
 	},
 	"mpd":{
 		"server": "/home/marcos/.config/mpd/socket",
-		"format": " {artist}  {title}  {stateIcon} ",
+		"format": " {artist:.16}  {title:.24} | {stateIcon}",
 		"format-disconnected":"-",
 		"format-stopped":"󰝛",
-		"unknown-tag": "???",
+		"unknown-tag": "-",
 		"interval": 5,
+    "on-click": "mpc toggle",
 		"state-icons": {
 			"paused": "󰏤",
 			"playing": "󰐊"
-		},
+		}
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",

@@ -22,7 +22,7 @@ window#waybar {
 
 #window {
 	border-radius: 4px;
-	padding: 0.5em 1em;
+	padding: 0px 1em;
 	border: 2px solid #d79921;
 }
 
@@ -105,14 +105,20 @@ button {
 	padding: 0px 0.7em;
 	border-radius: 4px;
 	margin-left: 4px;
+  border: 2px solid #b16286;
 }
 
 #mpd.playing {
-    background-color: #b12286;
+    background-color: #b16286;
 }
 
 #mpd.paused {
-    background-color: #8f3f71;
+    background-color: transparent;
+}
+
+#mpd.stopped {
+    background-color: transparent;
+    border:none;
 }
 
 #idle_inhibitor.activated {
