@@ -66,7 +66,8 @@
 		"icon": true,
 		"icon-size": 14,
 		"rewrite": {
-			"(.*) — Mozilla Firefox": "$1"
+			"(.*) — Mozilla Firefox": "$1",
+			"(.*) - Brave": "$1"
 		}
 	},
 	"sway/mode": {
