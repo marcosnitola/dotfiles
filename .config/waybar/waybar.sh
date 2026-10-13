@@ -1,10 +1,20 @@
 #!/usr/bin/env sh
 
-# Terminate already running bar instances
-pkill waybar
+# Get PIDs of Waybar instances already running
+waybar_pids=($(pgrep waybar))
 
-# Wait until the processes have been shut down
-while pgrep -x waybar >/dev/null; do sleep 0.1; done
+# Create log file for new Waybar instance
+log_file=$(mktemp)
 
-# Launch main
-waybar $@ &
+# Launch main Waybar
+waybar "$@" >"$log_file" 2>&1 &
+
+# Wait until main Waybar is loaded
+until grep -q -F "[info] Bar configured" "$log_file"; do
+    sleep 0.1
+done
+
+# Kill previous Wayland instances
+for pid in "${waybar_pids[@]}"; do
+    kill "$pid"
+done
