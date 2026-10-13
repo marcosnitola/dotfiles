@@ -164,12 +164,13 @@
 	},
 	"network": {
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
-		"format-wifi": "{essid} ({signalStrength}%) 󰤨",
-		"format-ethernet": "{ipaddr}/{cidr} 󰈀",
-		"tooltip-format": "{ifname} via {gwaddr} 󰛳",
-		"format-linked": "{ifname} (No IP) 󰛳",
-		"format-disconnected": "Disconnected ⚠",
-		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+		"format-wifi": "{icon} {bandwidthTotalBits}",
+		"format-ethernet": "󰈀 {ipaddr}/{cidr}",
+		"tooltip-format": "󰛳 {ifname}: {ipaddr}/{cidr} via {gwaddr}",
+		"format-linked": "󰛳 {ifname} (No IP)",
+		"format-disconnected": "⚠ Disconnected",
+		"format-alt": "{icon} {essid} ({signalStrength}%)",
+		"format-icons": ["󰤟","󰤢","󰤥","󰤨"]
 	},
 	"pulseaudio": {
 		// "scroll-step": 1, // %, can be a float
