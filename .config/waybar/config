@@ -118,7 +118,7 @@
 		"tooltip": false
 	},
 	"memory": {
-		"format": "{}% "
+		"format": " {}%"
 	},
 	"temperature": {
 		// "thermal-zone": 2,
@@ -130,7 +130,7 @@
 	},
 	"backlight": {
 		// "device": "acpi_video1",
-		"format": "{percent}% {icon}",
+		"format": "{icon} {percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""]
 	},
 	"battery": {
