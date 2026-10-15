@@ -17,8 +17,10 @@ set $right l
 set $term kitty
 # Your preferred application launcher
 set $menu wofi --show drun
+
 # Set mode label
 set $mode_resize "󰩨  Resize"
+set $mode_mpd "󰐎 MPD Player"
 
 font pango:JetBrainsMono NFM 8
 
@@ -228,6 +230,20 @@ bindsym $mod+r mode $mode_resize
     bindsym Control+Print exec grim - | wl-copy
     bindsym Control+Shift+Print exec grim -g "$(slurp)" - | wl-copy
     bindsym $mod+period exec rofimoji --selector wofi --typer wtype --files emojis --clipboarder wl-copy --action clipboard
+
+mode $mode_mpd {
+    bindsym k exec mpc toggle; mode "default"
+    bindsym j exec mpc seek -10; mode "default"
+    bindsym l exec mpc seek +10; mode "default"
+    bindsym Shift+j exec mpc prev; mode "default"
+    bindsym Shift+l exec mpc next; mode "default"
+    bindsym 0 exec mpc seek 0; mode "default"
+    bindsym s exec mpc stop; mode "default"
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+v mode $mode_mpd
 
 #
 # Status Bar:
