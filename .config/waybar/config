@@ -71,7 +71,8 @@
 		}
 	},
 	"sway/mode": {
-		"format": "󰌌 <span style=\"italic\">{}</span>"
+		"format": "<span color='#d79921'>󰌌</span> {:.1}",
+		"tooltip": "{}"
 	},
 	"sway/scratchpad": {
 		"format": "{icon} {count}",

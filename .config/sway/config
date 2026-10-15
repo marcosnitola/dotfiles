@@ -17,6 +17,8 @@ set $right l
 set $term kitty
 # Your preferred application launcher
 set $menu wofi --show drun
+# Set mode label
+set $mode_resize "󰩨  Resize"
 
 font pango:JetBrainsMono NFM 8
 
@@ -184,7 +186,7 @@ for_window [class="Pinentry-gtk"] floating enable
 #
 # Resizing containers:
 #
-mode "resize" {
+mode $mode_resize {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
@@ -204,7 +206,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode $mode_resize
 #
 # Utilities:
 #
