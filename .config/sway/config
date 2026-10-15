@@ -212,18 +212,22 @@ bindsym $mod+r mode $mode_resize
 # Utilities:
 #
     # Special keys to adjust volume via PulseAudio
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+    bindsym --locked XF86AudioMute exec swayosd-client --output-volume mute-toggle
+    bindsym --locked XF86AudioLowerVolume exec swayosd-client --output-volume lower
+    bindsym --locked XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+    #bindsym --locked XF86AudioMicMute exec sh -c 'pactl set-source-mute \@DEFAULT_SOURCE@ toggle ; swayosd-client --input-volume mute-toggle'
+    bindsym --locked XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
     # Special keys to adjust brightness via brightnessctl
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    bindsym --locked XF86MonBrightnessDown exec swayosd-client --brightness lower
+    bindsym --locked XF86MonBrightnessUp exec swayosd-client --brightness raise
+    # Capslock
+    bindsym --release --locked Caps_Lock exec swayosd-client --caps-lock
     # Special key to take a screenshot with grim
     bindsym Print exec grim ~/Images/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S_screenshot.png')
     bindsym Shift+Print exec grim -g "$(slurp)" ~/Images/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S_screenshot.png')
     bindsym Control+Print exec grim - | wl-copy
     bindsym Control+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+    bindsym $mod+period exec rofimoji --selector wofi --typer wtype --files emojis --clipboarder wl-copy --action clipboard
 
 #
 # Status Bar:
@@ -257,5 +261,6 @@ gaps inner 6
 gaps outer 4
 
 exec_always ~/.config/waybar/waybar.sh
+exec swayosd-server
 
 include /etc/sway/config.d/*
