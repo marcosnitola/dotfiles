@@ -156,7 +156,8 @@ for_window [class="Pinentry-gtk"] floating enable
 #
 
     # Switch the current container between different layout styles (tabbed, horizontal or vertical split)
-    bindsym $mod+w layout toggle tabbed splitv splith
+    bindsym $mod+Shift+m layout toggle split
+    bindsym $mod+m layout toggle tabbed split
     bindsym $mod+n splitt
 
     # Make the current focus fullscreen
